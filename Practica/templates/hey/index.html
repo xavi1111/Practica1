@@ -4,7 +4,7 @@
            <ul>
     {% for thread in latest_threads_list %}
         {% if thread.ThreadName != "test" %}
-            <li><a href="{% url 'thread_detail' Thread.id %}">{{ thread.ThreadName }}</a></li>
+            <li><a href="{% url 'thread_detail' thread.id %}">{{ thread.ThreadName }}</a></li>
         {% endif %}
     {% endfor %}
        </ul>
