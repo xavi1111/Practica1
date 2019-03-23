@@ -17,7 +17,6 @@ class Image(models.Model):
     Comments = models.IntegerField,
 
 
-
 class Comment(models.Model):
     UserId = models.ForeignKey(User, on_delete=models.DO_NOTHING,)
     ImageId = models.ForeignKey(Image, on_delete=models.DO_NOTHING,)

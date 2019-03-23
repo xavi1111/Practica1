@@ -19,6 +19,7 @@ from django.urls import path
 
 from Practica import views
 
+app_name = 'hey'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

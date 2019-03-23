@@ -1,0 +1,13 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static '' %}" />
+{% if latest_threads_list %}
+           <ul>
+    {% for thread in latest_threads_list %}
+        {% if thread.ThreadName != "test" %}
+            <li><a href="{% url 'thread_detail' Thread.id %}">{{ thread.ThreadName }}</a></li>
+        {% endif %}
+    {% endfor %}
+       </ul>
+{% else %}
+           <p>No threads are available.</p>
+{% endif %}
