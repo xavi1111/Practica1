@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
-from django.urls import path
+from django.urls import path, include
 
 from Practica import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+
     url(r'^$', views.index, name='home'),
 
     url(r'^thread/(?P<pk>\d+)/$',
