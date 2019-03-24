@@ -17,7 +17,9 @@ class ThreadDetail(DetailView):
     template_name = 'hey/thread_detail.html'
 
     def get_context_data(self, **kwargs):
+        latest_threads_list = Thread.objects.order_by('ThreadName')[:5]
         context = super(ThreadDetail, self).get_context_data(**kwargs)
+        context['latest_threads_list'] = latest_threads_list
         return context
 
 
