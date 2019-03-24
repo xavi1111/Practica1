@@ -53,12 +53,6 @@ body {font-size:16px;}
         </h1>
   </div>
 
-        {% for taggedImage in latest_image_list %}
-            {% if taggedImage.TagId == thread.TagId %}
-                <li><a href="{% url 'image_detail' taggedImage.id %}">{{ taggedImage.ImageID}}</a></li>
-            {% endif %}
-        {% endfor %}
-
 <script>
 // Script to open and close sidebar
 function w3_open() {

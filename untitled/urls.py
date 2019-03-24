@@ -22,11 +22,17 @@ from Practica import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('Practica.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('signup/', views.SignUp.as_view(), name='signup'),
 
     url(r'^$', views.index, name='home'),
 
     url(r'^thread/(?P<pk>\d+)/$',
         views.ThreadDetail.as_view(),
         name='thread_detail'),
+
+    url(r'^image/(?P<pk>\d+)/$',
+        views.ImageDetail.as_view(),
+        name='image_detail'),
 ]

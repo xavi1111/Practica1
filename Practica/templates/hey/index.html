@@ -31,6 +31,7 @@ body {font-size:16px;}
     {% else %}
                <p>No threads are available.</p>
     {% endif %}
+    <p><a href="{% url 'logout' %}">logout</a></p>
   </div>
 </nav>
 
@@ -54,6 +55,7 @@ body {font-size:16px;}
             <br> Please select a thread to start</br>
         {% else %}
              <p>You are not logged in</p>
+              <a href="{% url 'login' %}">login</a>
         {% endif %}
         </h1>
   </div>
